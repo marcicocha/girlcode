@@ -13,7 +13,7 @@
       }
     </style>
   </head>
-  <body onload="arrayHandler()">
+  <body onload="resp()">
     <header>
       <nav class="flex flex_justify_between flex_align_items">
         <div>Landy</div>
@@ -52,7 +52,14 @@
       <button onclick="shiftMarketHandler()">shift</button>
       <button onclick="unshiftMarketHandler()">unshift</button>
     </section>
-    <div>TO DO FEATURE</div>
+    <section style="display: flex">
+      <div id="colors"></div>
+    </section>
+    <br />
+    <section>
+      <button onclick="singleUserApi()">CALL API</button>
+
+    </section>
     <footer></footer>
     <script src="./assets/js/index.js"></script>
   </body>

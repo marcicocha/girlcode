@@ -12,7 +12,7 @@ nav {
   padding: 1rem;
   color: white;
 }
-nav ul {
+ul {
   list-style-type: none;
   display: flex;
 }
@@ -25,3 +25,8 @@ nav ul li {
     min-height: 20rem;
     margin-top: 3rem;
 }
+/* #color {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+} */

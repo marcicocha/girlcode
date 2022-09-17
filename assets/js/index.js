@@ -79,12 +79,41 @@ function shiftMarketHandler() {
   myMarketList.shift();
   arrayHandler();
 }
-
 function unshiftMarketHandler() {
   const value = document.getElementById("marketItem").value;
   myMarketList.unshift(value);
   arrayHandler();
   document.getElementById("marketItem").value = "";
-
 }
 
+const resp = async () => {
+  const response = await fetch("https://reqres.in/api/unknown", {
+    method: "GET",
+  });
+  const colorListResponse = await response.json();
+  console.log(colorListResponse, "RESPs");
+  const colorList = colorListResponse.data;
+  for (let i = 0; i < colorList.length; i++) {
+    let li = document.createElement("li");
+    li.style.backgroundColor = colorList[i].color;
+    li.innerHTML = colorList[i].name;
+    document.getElementById("colors").appendChild(li);
+  }
+};
+
+async function singleUserApi() {
+  const response = await fetch('https://reqres.in/api/users/2')
+  console.log(response, 'USER RESPONSE')
+  const userResponse = await response.json()
+  console.log(userResponse, 'USER DATA')
+  const user = userResponse.data
+  console.log(user, 'USER:::')
+  document.getElementById('contact').innerHTML = user.email
+}
+// fetch("https://reqres.in/api/unknown")
+//   .then((data) => {
+//     data.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   });
