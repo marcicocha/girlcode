@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Landy</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <style>
+      button {
+        background-color: blue;
+        color: white;
+        outline: none;
+        border: none;
+        line-height: 1rem;
+      }
+    </style>
+  </head>
+  <body onload="arrayHandler()">
+    <header>
+      <nav class="flex flex_justify_between flex_align_items">
+        <div>Landy</div>
+        <div>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="age"></div>
+      <button onclick="toggleHandler()">Click me</button>
+      <br />
+      <div id="contact"></div>
+    </section>
+    <section>
+      <form onsubmit="return false">
+        <input type="text" id="firstNumber" />
+        <input type="text" id="secondNumber" />
+        <div style="margin-top: 1rem">
+          <button onclick="calculatorHandler('multiply')">+</button>
+          <button onclick="calculatorHandler('divide')">-</button>
+        </div>
+      </form>
+      <small id="smallText"></small>
+      <h1 id="result"></h1>
+    </section>
+    <section>
+      <h1>Market List</h1>
+      <ul id="myUl"></ul>
+      <input type="text" id="marketItem" />
+      <button onclick="addMarketHandler()">Add</button>
+      <button onclick="removeMarketHandler()">Remove</button>
+      <button onclick="shiftMarketHandler()">shift</button>
+      <button onclick="unshiftMarketHandler()">unshift</button>
+    </section>
+    <footer></footer>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
